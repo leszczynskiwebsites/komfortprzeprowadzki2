@@ -1,0 +1,299 @@
+*
+{
+    margin: 0;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+/*NAVIGATION*/
+#navigation
+    {
+        width: 100%;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 999;
+        -webkit-box-shadow: -3px -4px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: -3px -4px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: -3px -4px 24px 0px rgba(66, 68, 90, 1);
+    }
+
+    #navigation a{text-decoration: none;color: rgb(0, 0, 0);  transition: all 0.2s;}
+    #navigation #midnav a:hover{color: rgb(133, 133, 133);}
+    #leftnav{flex: 25%;}
+    #leftnav img{max-width: 130px;}
+    #midnav{flex: 50%;}
+    #midnav a{padding-left: 4%;padding-right: 4%;}
+    #rightnav{flex: 25%;}
+
+    #rightnav a
+    {
+        padding: 8px 15px 8px 15px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+    }
+    #rightnav a:hover {background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);}
+    li {list-style: none;}
+    .navbar {display: none;}
+    input[type=checkbox] {display: none;}
+    
+    .hamburger 
+    {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+    }
+
+    
+    @media (max-width: 1090px) {
+        #navigation
+        {
+            display: none;
+        }
+        .navbar 
+        {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px;
+        padding-right: 5%;
+        padding-left: 5%;
+        background-color: rgb(255, 255, 255);
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 999;
+        -webkit-box-shadow: -3px -4px 24px 0px rgba(66, 68, 90, 1);
+        -moz-box-shadow: -3px -4px 24px 0px rgba(66, 68, 90, 1);
+        box-shadow: -3px -4px 24px 0px rgba(66, 68, 90, 1);
+        }
+
+        .menu 
+        { 
+            display: none;
+            position: absolute;
+            right: 0;
+            left: 0;
+            text-align: center;
+            padding: 16px 0;
+            background-color: rgb(255, 255, 255);
+            margin-top: 21px;
+            padding-bottom: 50px;
+            z-index: 999;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        .menu a 
+        {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: larger;
+            transition: all 0.2s;
+        }
+
+        .menu li:hover {display: inline-block;}
+        .logo img {width: 55%;}
+        .menu a:hover {color: rgb(105, 105, 105);}
+        .menu li + li {margin-top: 22px;}
+        input[type=checkbox]:checked ~ .menu {display: block;}
+        .hamburger {display: block;color: rgb(0, 0, 0); font-weight: bold; font-size: 30px;}
+        .hamburger:hover {cursor: pointer;}
+        .dropdown {left: 50%;top: 30px;transform: translateX(35%);}
+        #contact {padding: 8px; border: 2px solid rgb(0, 0, 0); border-radius: 20px; padding: 8px  30px 8px 30px;}
+        #contact:hover { background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);}
+    }
+
+
+
+     /*FOOTER*/
+ #footer2
+ {
+     background: rgba(0, 0, 0, 0.819);
+     color: white;
+     width: 100%;
+     bottom: 0;
+ }
+ #footer2 a
+ {
+     color: white;
+     transition: all 0.2s;
+     text-decoration: none;
+ }
+ #navfooter
+ {
+     text-align: center;
+     width: 100%;
+ }
+ #navfooter a
+ {
+     margin-left: 5vw;
+ }
+ #footer2 a:hover
+ {
+     color: rgb(229, 229, 229);
+     transition: all 0.2s;
+ }
+ #logo 
+ {
+     text-align: center;
+     padding-bottom: 40px;
+     padding-top: 40px;
+ }
+ #logo img
+ {
+     width: 10%;
+ }
+ #logo a
+ {
+     color: white;
+ }
+ #footerflex
+ {
+     display: flex;
+     align-items: center;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     color: white;
+     line-height:30px;
+ }
+ #companydata
+ {
+     flex: 50%;
+     text-align: center;
+ }
+ #hourofwork
+ {
+     flex: 50%;
+     text-align: center;
+ }
+ #copyright
+ {
+     color: rgb(255, 255, 255);
+     text-align: center;
+     font-size: small;
+     padding-bottom: 30px;
+ }
+ #socialmedia
+ {
+     text-align: center;
+ }
+ #socialmedia img
+ {
+     width: 3%;
+     margin-bottom: 3%;
+ }
+ 
+ @media (max-width: 990px) 
+ {
+     #socialmedia img
+ {
+     width: 8%;
+     margin-bottom: 3%;
+ }
+     #logo img {width: 30%;}
+     
+     #footerflex
+     {
+         display: block;
+     }
+     #hourofwork
+     {
+         padding-top: 30px;
+     }
+     #navfooter a
+     {
+         display: block;
+         padding-bottom: 10px;
+         margin: 0;
+     }
+ }
+
+
+ /*SCROLBAR*/
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {background-color: #e0000000;}
+::-webkit-scrollbar-thumb 
+    {
+        border-radius: 8px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+        background-color: #767676;
+    }
+
+
+
+    .container{
+        max-width: 85%;
+        margin:20px auto;
+        margin-top: 120px;
+      }
+      
+      .container .title{
+        font-size: 25px;
+        background-color: #000;
+        color:#fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding:15px;
+      }
+      
+      .container .image-container{
+        columns:3 250px;
+        gap:15px;
+      }
+      
+      .container .image-container img{
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 100%;
+      }
+      .image-container img.zoomed {
+          transform: scale(1.5);
+          z-index: 1;
+      }
+      .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 9999;
+          overflow: auto;
+        }
+        
+        .modal-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+        
+        .modal-img {
+          position: fixed;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        
+        .modal-close {
+          position: absolute;
+          top: 40px;
+          right: 40px;
+          color: #fff;
+          font-size: 37px;
+          cursor: pointer;
+        }
+        img:hover
+        {
+          cursor: pointer;
+        }
